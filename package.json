@@ -1,6 +1,6 @@
 {
   "name": "@ivuorinen/eslint-config",
-  "version": "0.5.12",
+  "version": "0.5.13",
   "description": "ivuorinen's shareable configuration for ESLint.",
   "author": {
     "name": "Ismo Vuorinen",
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivuorinen/base-configs-eslint.git"
+    "url": "git+https://github.com/ivuorinen/base-configs-eslint.git"
   },
   "scripts": {
     "postinstall": "node scripts/postinstall.cjs"
