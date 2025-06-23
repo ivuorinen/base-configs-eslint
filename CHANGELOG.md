@@ -1,48 +1,28 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [0.5.12](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.5.11...@ivuorinen/eslint-config@0.5.12) (2025-06-21)
 
-
 ### Bug Fixes
 
-* **deps:** update eslint-plugin-jest to 29.0.0 ([#365](https://github.com/ivuorinen/base-configs/issues/365)) ([deed1fa](https://github.com/ivuorinen/base-configs/commit/deed1fa28a4ed5dc1da450d04c6c818269dc47b5))
-
-
-
-
+- **deps:** update eslint-plugin-jest to 29.0.0 ([#365](https://github.com/ivuorinen/base-configs/issues/365)) ([deed1fa](https://github.com/ivuorinen/base-configs/commit/deed1fa28a4ed5dc1da450d04c6c818269dc47b5))
 
 ## 0.5.11 (2025-02-23)
 
 **Note:** Version bump only for package @ivuorinen/eslint-config
 
-
-
-
-
 ## 0.5.10 (2025-02-23)
-
 
 ### Bug Fixes
 
-* **deps:** update globals to 16.0.0 ([#342](https://github.com/ivuorinen/base-configs/issues/342)) ([04b333b](https://github.com/ivuorinen/base-configs/commit/04b333b445b6beb4344d2f9102bb5d3dc72ae26a))
-
-
-
-
+- **deps:** update globals to 16.0.0 ([#342](https://github.com/ivuorinen/base-configs/issues/342)) ([04b333b](https://github.com/ivuorinen/base-configs/commit/04b333b445b6beb4344d2f9102bb5d3dc72ae26a))
 
 ## 0.5.9 (2025-01-17)
 
-
 ### Bug Fixes
 
-* **deps:** update eslint-config-prettier to 10.0.1 ([#324](https://github.com/ivuorinen/base-configs/issues/324)) ([8a0d38e](https://github.com/ivuorinen/base-configs/commit/8a0d38e173df40b771d42b694a24145559200506))
-
-
-
-
+- **deps:** update eslint-config-prettier to 10.0.1 ([#324](https://github.com/ivuorinen/base-configs/issues/324)) ([8a0d38e](https://github.com/ivuorinen/base-configs/commit/8a0d38e173df40b771d42b694a24145559200506))
 
 ## 0.5.8 (2024-11-25)
 
@@ -84,7 +64,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **deps:** update eslint-plugin-sonarjs to 2.0.0 ([#289](https://github.com/ivuorinen/base-configs/issues/289)) ([987baa6](https://github.com/ivuorinen/base-configs/commit/987baa6272b68aaab4aa34ca86892c1dd06fea77))
 
-# [0.5.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.4.48...@ivuorinen/eslint-config@0.5.0) (2024-08-21)
+## [0.5.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.4.48...@ivuorinen/eslint-config@0.5.0) (2024-08-21)
 
 - feat!: upgrade to eslint 9, update configs ([ad9ed82](https://github.com/ivuorinen/base-configs/commit/ad9ed820d606e7fe484b7b5f553b5dc13277f037))
 
@@ -373,7 +353,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **deps:** update dependency eslint-plugin-sonarjs to v0.22.0 ([13e9457](https://github.com/ivuorinen/base-configs/commit/13e945747fe7a69c7d3bcd3151d38415656b5f93))
 
-# [0.4.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.3.4...@ivuorinen/eslint-config@0.4.0) (2023-11-01)
+## [0.4.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.3.4...@ivuorinen/eslint-config@0.4.0) (2023-11-01)
 
 ### Features
 
@@ -399,7 +379,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **deps:** update dependency eslint-plugin-import to v2.29.0 ([#117](https://github.com/ivuorinen/base-configs/issues/117)) ([f1507a2](https://github.com/ivuorinen/base-configs/commit/f1507a230fa41af9a48061848a3c92a667313193))
 
-# [0.3.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.2.19...@ivuorinen/eslint-config@0.3.0) (2023-10-25)
+## [0.3.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.2.19...@ivuorinen/eslint-config@0.3.0) (2023-10-25)
 
 ### Features
 
@@ -513,7 +493,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @ivuorinen/eslint-config
 
-# [0.2.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.1.11...@ivuorinen/eslint-config@0.2.0) (2023-07-08)
+## [0.2.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/eslint-config@0.1.11...@ivuorinen/eslint-config@0.2.0) (2023-07-08)
 
 ### Features
 
