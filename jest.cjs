@@ -1,6 +1,6 @@
-'use strict'
+"use strict";
 
-const jest = require('eslint-plugin-jest')
+const jest = require("eslint-plugin-jest");
 
 /**
  * eslint configuration for jest.
@@ -8,21 +8,21 @@ const jest = require('eslint-plugin-jest')
  */
 module.exports = [
   {
-    files: ['**/*.{js,mjs,cjs}'],
+    files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
       globals: {
-        ...jest.globals
-      }
-    }
+        ...jest.globals,
+      },
+    },
   },
-  jest.configs['flat/recommended'],
-  jest.configs['flat/style'],
+  jest.configs["flat/recommended"],
+  jest.configs["flat/style"],
   {
     rules: {
-      ...jest.rules['flat/recommended'].rules
+      ...jest.rules["flat/recommended"].rules,
     },
     plugins: {
-      jest
-    }
-  }
-]
+      jest,
+    },
+  },
+];
