@@ -1,2 +1,2 @@
-import config from './wrapper.mjs'
-export default config
+import config from "./wrapper.mjs";
+export default config;
