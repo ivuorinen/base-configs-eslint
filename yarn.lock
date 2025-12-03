@@ -170,7 +170,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.1, @eslint/js@npm:^9":
+"@eslint/js@npm:9.39.1, @eslint/js@npm:^9.39.1":
   version: 9.39.1
   resolution: "@eslint/js@npm:9.39.1"
   checksum: 10c0/6f7f26f8cdb7ad6327bbf9741973b6278eb946f18f70e35406e88194b0d5c522d0547a34a02f2a208eec95c5d1388cdf7ccb20039efd2e4cb6655615247a50f1
@@ -285,23 +285,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ivuorinen/config-checker@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@ivuorinen/config-checker@npm:2.1.1"
+  checksum: 10c0/b342992ca95a2e8088bf1c36e9d826fb67148023763cc473e752a012ba03b76b5458606a9ddb0b6fe0bcc261d2c0d0fa1c9be877aa4cff78a64fd0eb0b60cf2e
+  languageName: node
+  linkType: hard
+
 "@ivuorinen/eslint-config@workspace:.":
   version: 0.0.0-use.local
   resolution: "@ivuorinen/eslint-config@workspace:."
   dependencies:
-    "@eslint/js": "npm:^9"
-    "@ivuorinen/config-checker": "npm:^1.1.12"
+    "@eslint/js": "npm:^9.39.1"
+    "@ivuorinen/config-checker": "npm:^2.1.1"
     "@ivuorinen/markdownlint-config": "npm:^0.3.16"
     "@ivuorinen/prettier-config": "npm:^0.3.12"
     "@ivuorinen/semantic-release-config": "npm:^0.3.18"
-    eslint: "npm:^9.15.0"
+    eslint: "npm:^9.39.1"
     eslint-config-eslint: "npm:^13.0.0"
-    eslint-config-prettier: "npm:^10.0.0"
-    eslint-plugin-import: "npm:^2"
-    eslint-plugin-jest: "npm:^29.0.0"
-    eslint-plugin-n: "npm:^17"
-    eslint-plugin-promise: "npm:^7"
-    globals: "npm:^16.0.0"
+    eslint-config-prettier: "npm:^10.1.8"
+    eslint-plugin-import: "npm:^2.32.0"
+    eslint-plugin-jest: "npm:^29.2.1"
+    eslint-plugin-n: "npm:^17.23.1"
+    eslint-plugin-promise: "npm:^7.2.1"
+    globals: "npm:^16.5.0"
     typescript: "npm:>=4.2.0"
   languageName: unknown
   linkType: soft
@@ -2390,7 +2397,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^10.0.0":
+"eslint-config-prettier@npm:^10.1.8":
   version: 10.1.8
   resolution: "eslint-config-prettier@npm:10.1.8"
   peerDependencies:
@@ -2437,7 +2444,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2":
+"eslint-plugin-import@npm:^2.32.0":
   version: 2.32.0
   resolution: "eslint-plugin-import@npm:2.32.0"
   dependencies:
@@ -2466,9 +2473,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^29.0.0":
-  version: 29.2.0
-  resolution: "eslint-plugin-jest@npm:29.2.0"
+"eslint-plugin-jest@npm:^29.2.1":
+  version: 29.2.1
+  resolution: "eslint-plugin-jest@npm:29.2.1"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.0.0"
   peerDependencies:
@@ -2480,7 +2487,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: 10c0/3880065bc4f8081fb7f5bc017fae65b383e35c72445619bb6037fa374a84c36c18503642353c4615ddba8c8781b0ff1724decbc9b9b2f45f0e279e199797aeb8
+  checksum: 10c0/9115e35a537d458b37236c0ebba2ce357226d24cc0a2345c29fd8b14a63681343fc71ef0d4f0bbb47575f5c6a76b21da6dee183db4d8e0ccf9d8f4bfbb8c743f
   languageName: node
   linkType: hard
 
@@ -2505,25 +2512,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:^17":
-  version: 17.23.1
-  resolution: "eslint-plugin-n@npm:17.23.1"
-  dependencies:
-    "@eslint-community/eslint-utils": "npm:^4.5.0"
-    enhanced-resolve: "npm:^5.17.1"
-    eslint-plugin-es-x: "npm:^7.8.0"
-    get-tsconfig: "npm:^4.8.1"
-    globals: "npm:^15.11.0"
-    globrex: "npm:^0.1.2"
-    ignore: "npm:^5.3.2"
-    semver: "npm:^7.6.3"
-    ts-declaration-location: "npm:^1.0.6"
-  peerDependencies:
-    eslint: ">=8.23.0"
-  checksum: 10c0/35d23fe25d92b8aa3257a8bd003094b4042c0492ddc82e8b20728eb6546d2d5c31a08be215a7996f113de7b24a1a27377136345e95a5e2c96c44d3653be2c988
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-n@npm:^17.11.1":
   version: 17.21.3
   resolution: "eslint-plugin-n@npm:17.21.3"
@@ -2543,7 +2531,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:^7":
+"eslint-plugin-n@npm:^17.23.1":
+  version: 17.23.1
+  resolution: "eslint-plugin-n@npm:17.23.1"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.5.0"
+    enhanced-resolve: "npm:^5.17.1"
+    eslint-plugin-es-x: "npm:^7.8.0"
+    get-tsconfig: "npm:^4.8.1"
+    globals: "npm:^15.11.0"
+    globrex: "npm:^0.1.2"
+    ignore: "npm:^5.3.2"
+    semver: "npm:^7.6.3"
+    ts-declaration-location: "npm:^1.0.6"
+  peerDependencies:
+    eslint: ">=8.23.0"
+  checksum: 10c0/35d23fe25d92b8aa3257a8bd003094b4042c0492ddc82e8b20728eb6546d2d5c31a08be215a7996f113de7b24a1a27377136345e95a5e2c96c44d3653be2c988
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-promise@npm:^7.2.1":
   version: 7.2.1
   resolution: "eslint-plugin-promise@npm:7.2.1"
   dependencies:
@@ -2621,7 +2628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.15.0":
+"eslint@npm:^9.39.1":
   version: 9.39.1
   resolution: "eslint@npm:9.39.1"
   dependencies:
@@ -3237,7 +3244,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^16.0.0":
+"globals@npm:^16.5.0":
   version: 16.5.0
   resolution: "globals@npm:16.5.0"
   checksum: 10c0/615241dae7851c8012f5aa0223005b1ed6607713d6813de0741768bd4ddc39353117648f1a7086b4b0fa45eae733f1c0a0fe369aa4e543bb63f8de8990178ea9
