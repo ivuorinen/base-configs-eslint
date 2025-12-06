@@ -1,3 +1,37 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 1.0.0 (2025-12-06)
+
+
+### Bug Fixes
+
+* **github-action:** update github/codeql-action (v3.29.0 → v3.29.2) ([#2](https://github.com/ivuorinen/base-configs-eslint/issues/2)) ([eb904d0](https://github.com/ivuorinen/base-configs-eslint/commit/eb904d0d2cc85062094fbedcc002f20c776cc1ea))
+* **github-action:** update github/codeql-action (v3.29.2 → v3.29.4) ([#5](https://github.com/ivuorinen/base-configs-eslint/issues/5)) ([65d9ed1](https://github.com/ivuorinen/base-configs-eslint/commit/65d9ed13d62d1207f70aa13f28f47e7aa9c32031))
+* **github-action:** update github/codeql-action (v3.29.4 → v3.29.8) ([#7](https://github.com/ivuorinen/base-configs-eslint/issues/7)) ([b4db856](https://github.com/ivuorinen/base-configs-eslint/commit/b4db85695c2ac2930e246f59817978ac7df6e555))
+* **github-action:** update github/codeql-action (v3.29.8 → v3.29.9) ([#12](https://github.com/ivuorinen/base-configs-eslint/issues/12)) ([cff858e](https://github.com/ivuorinen/base-configs-eslint/commit/cff858e5e31da6f201562a5f505c3512da1af371))
+* **github-action:** update github/codeql-action (v3.29.9 → v3.29.10) ([#13](https://github.com/ivuorinen/base-configs-eslint/issues/13)) ([5321383](https://github.com/ivuorinen/base-configs-eslint/commit/532138392530da50bc6e2c0bb430c939a60255de))
+* **github-action:** update ivuorinen/actions (25.7.14 → 25.7.21) ([#6](https://github.com/ivuorinen/base-configs-eslint/issues/6)) ([ad2db5c](https://github.com/ivuorinen/base-configs-eslint/commit/ad2db5c5bd58a4d41352e3397f0ed9da607515a7))
+* **github-action:** update ivuorinen/actions (25.7.7 → 25.7.14) ([#4](https://github.com/ivuorinen/base-configs-eslint/issues/4)) ([0286f30](https://github.com/ivuorinen/base-configs-eslint/commit/0286f304f23dab0338e08b61dc870ceb7c8f4dd9))
+* **github-action:** update ivuorinen/actions (25.8.11 → 25.8.18) ([#14](https://github.com/ivuorinen/base-configs-eslint/issues/14)) ([3b2199c](https://github.com/ivuorinen/base-configs-eslint/commit/3b2199c955a591729da3a613d8eb9b71f58358e9))
+* **github-action:** update ivuorinen/actions (25.8.4 → 25.8.11) ([#10](https://github.com/ivuorinen/base-configs-eslint/issues/10)) ([2e3b75c](https://github.com/ivuorinen/base-configs-eslint/commit/2e3b75cd79c43ae32db1af9945725aa927246f65))
+* **github-release:** update adrienverge/yamllint (v1.37.0 → v1.37.1) ([#15](https://github.com/ivuorinen/base-configs-eslint/issues/15)) ([5683ad4](https://github.com/ivuorinen/base-configs-eslint/commit/5683ad412d2c5f5b9a6d2cf69cdd72cf8849656f))
+* **github-release:** update bridgecrewio/checkov (3.2.400 → 3.2.464) ([#16](https://github.com/ivuorinen/base-configs-eslint/issues/16)) ([d86c6ec](https://github.com/ivuorinen/base-configs-eslint/commit/d86c6ec1d0bcda7657b8df93ba3f9387e16e759b))
+* **github-release:** update renovatebot/pre-commit-hooks (41.82.9 → 41.82.10) ([#25](https://github.com/ivuorinen/base-configs-eslint/issues/25)) ([f7d6bc2](https://github.com/ivuorinen/base-configs-eslint/commit/f7d6bc27da739a4cf2bc4e6068258cf80640df4b))
+
+
+### Features
+
+* **github-action:** update actions/checkout (v4.2.2 → v4.3.0) ([#11](https://github.com/ivuorinen/base-configs-eslint/issues/11)) ([a3e2480](https://github.com/ivuorinen/base-configs-eslint/commit/a3e248088b4013314aa0c3b5be6894c937c956ee))
+* **github-action:** update ivuorinen/actions (25.6.17 → 25.7.7) ([#3](https://github.com/ivuorinen/base-configs-eslint/issues/3)) ([7ede432](https://github.com/ivuorinen/base-configs-eslint/commit/7ede43203383c93b808931d04d51067cc981818b))
+* **github-action:** update ivuorinen/actions (25.7.21 → 25.8.4) ([#8](https://github.com/ivuorinen/base-configs-eslint/issues/8)) ([ebe8958](https://github.com/ivuorinen/base-configs-eslint/commit/ebe8958390bb3c97fde77910669e9be7d5eb0bdb))
+* **github-release:** update igorshubovych/markdownlint-cli (v0.44.0 → v0.45.0) ([#19](https://github.com/ivuorinen/base-configs-eslint/issues/19)) ([7bb67ff](https://github.com/ivuorinen/base-configs-eslint/commit/7bb67ff71ec7f8f7b09b0120cfcfbe8ba2c48717))
+* **github-release:** update koalaman/shellcheck-precommit (v0.10.0 → v0.11.0) ([#20](https://github.com/ivuorinen/base-configs-eslint/issues/20)) ([be5407e](https://github.com/ivuorinen/base-configs-eslint/commit/be5407e1a2afaa18db2d444c91f653ad28f884df))
+* initial import from base-configs ([674071e](https://github.com/ivuorinen/base-configs-eslint/commit/674071ec7ddb0c868c3108121772b424944da17f))
+* release pipeline, packages, yarn upgrade ([995cfae](https://github.com/ivuorinen/base-configs-eslint/commit/995cfae469df14b00b363584ee48f54b1f80eaa7))
+
 # Change Log
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
