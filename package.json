@@ -1,6 +1,6 @@
 {
   "name": "@ivuorinen/eslint-config",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "ivuorinen's shareable configuration for ESLint.",
   "author": {
     "name": "Ismo Vuorinen",
