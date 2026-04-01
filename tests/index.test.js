@@ -1,9 +1,8 @@
 import { describe, it, expect } from 'vitest'
-import { Linter } from 'eslint'
+import { hasRule, makeLint } from './helpers.js'
 import config from '../index.cjs'
 
-const lint = (code, filename = 'test.js') => new Linter().verify(code, config, filename)
-const hasRule = (messages, ruleId) => messages.some(m => m.ruleId === ruleId)
+const lint = makeLint(config, 'test.js')
 
 describe('index config — smoke', () => {
   it('loads and runs without throwing', () => {

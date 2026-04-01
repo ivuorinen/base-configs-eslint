@@ -1,11 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { Linter } from 'eslint'
+import { hasRule, makeLint } from './helpers.js'
 import config from '../jest.cjs'
 
 const jestSettings = { settings: { jest: { version: 27 } } }
-const lint = (code, filename = 'my.test.js') =>
-  new Linter().verify(code, [jestSettings, ...config], filename)
-const hasRule = (messages, ruleId) => messages.some(m => m.ruleId === ruleId)
+const lint = makeLint([jestSettings, ...config], 'my.test.js')
 
 describe('jest config — smoke', () => {
   it('loads and runs without throwing', () => {
