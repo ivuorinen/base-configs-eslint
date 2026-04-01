@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.19](https://github.com/ivuorinen/base-configs-eslint/compare/v1.0.18...v1.0.19) (2026-04-01)
+
+
+### Bug Fixes
+
+* clean up eslint plugins, add tests, fix vulnerabilities, add CI ([#162](https://github.com/ivuorinen/base-configs-eslint/issues/162)) ([3463a83](https://github.com/ivuorinen/base-configs-eslint/commit/3463a834f21aba071a4f60f2ce5a8736567ee233))
+
 ## [1.0.18](https://github.com/ivuorinen/base-configs-eslint/compare/v1.0.17...v1.0.18) (2026-04-01)
 
 ## [1.0.17](https://github.com/ivuorinen/base-configs-eslint/compare/v1.0.16...v1.0.17) (2026-03-28)
