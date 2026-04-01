@@ -28,11 +28,47 @@ jobs:
         # https://github.com/ivuorinen/actions
         uses: ivuorinen/actions/pr-lint@459781a253d1c53960506b124ae3beaa1090e2a3 # v2026.03.22
 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Install and enable corepack
+        shell: sh
+        run: npm install -g corepack --force && corepack enable
+
+      - name: Cache Node Modules
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        id: cache
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Dependencies
+        shell: bash
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - name: Run Tests
+        run: yarn test
+
   publish:
     name: Publish
     runs-on: ubuntu-latest
     needs:
       - Linter
+      - test
     permissions:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
