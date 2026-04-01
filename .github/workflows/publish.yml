@@ -6,7 +6,7 @@ on:
     branches:
       - main
 
-permissions: read-all
+permissions: {}
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -26,13 +26,20 @@ jobs:
     steps:
       - name: Run PR Lint
         # https://github.com/ivuorinen/actions
-        uses: ivuorinen/actions/pr-lint@459781a253d1c53960506b124ae3beaa1090e2a3 # v2026.03.22
+        uses: ivuorinen/actions/pr-lint@39dc3f9c2b914d48f65481b4e085d3e19e1daed9 # v2026.03.31
+
+  test:
+    name: Test
+    uses: ./.github/workflows/test.yml
+    permissions:
+      contents: read
 
   publish:
     name: Publish
     runs-on: ubuntu-latest
     needs:
       - Linter
+      - test
     permissions:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
@@ -62,7 +69,7 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('**/yarn.lock') }}
+          key: node-modules-${{ hashFiles('**/yarn.lock', '.nvmrc') }}
 
       - name: Install Dependencies
         shell: bash
