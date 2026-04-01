@@ -5,6 +5,7 @@ name: Test
 on:
   pull_request:
     branches: [main, master]
+  workflow_call:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -38,7 +39,7 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('**/yarn.lock') }}
+          key: node-modules-${{ hashFiles('**/yarn.lock', '.nvmrc') }}
 
       - name: Install Dependencies
         shell: bash
