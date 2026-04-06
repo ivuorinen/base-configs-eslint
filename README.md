@@ -62,7 +62,7 @@ See [CHANGELOG][changelog-link] for a human-readable history of changes.
 
 Distributed under the MIT License. See [LICENSE][license-link] for more information.
 
-[changelog-link]: ./CHANGELOG.md
+[changelog-link]: https://github.com/ivuorinen/base-configs-eslint/releases
 [eslint-docs-link]: https://eslint.org
 [eslint-link]: https://github.com/eslint/eslint
 [contributing-link]: https://github.com/ivuorinen/.github/blob/main/CONTRIBUTING.md
