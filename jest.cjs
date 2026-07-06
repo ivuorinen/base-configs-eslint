@@ -19,7 +19,7 @@ module.exports = [
   jest.configs["flat/style"],
   {
     rules: {
-      ...jest.rules["flat/recommended"].rules,
+      ...jest.configs["flat/recommended"].rules,
     },
     plugins: {
       jest,
