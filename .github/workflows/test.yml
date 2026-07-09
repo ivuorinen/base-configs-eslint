@@ -7,8 +7,11 @@ on:
     branches: [main, master]
   workflow_call:
 
+# Suffix keeps this group distinct from a caller's group when run via
+# workflow_call (github.workflow resolves to the caller), avoiding a
+# self-deadlock with publish.yml's concurrency group.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-test
   cancel-in-progress: true
 
 permissions: {}
