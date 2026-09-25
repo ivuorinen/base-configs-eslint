@@ -66,13 +66,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@conventional-changelog/template@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@conventional-changelog/template@npm:1.2.1"
-  checksum: 10c0/5a391c5fa8f740d892aac8d5ee14e255625d6c1938e6c3c04c104129a58b5baff3c9c04592744ba0dbbbce7b421ca906af378f194b10d7803c4906b23028e0b4
-  languageName: node
-  linkType: hard
-
 "@emnapi/core@npm:1.10.0":
   version: 1.10.0
   resolution: "@emnapi/core@npm:1.10.0"
@@ -303,7 +296,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^10.0.1"
     "@ivuorinen/config-checker": "npm:^2.2.1"
-    "@ivuorinen/semantic-release-config": "npm:^2.0.0"
+    "@ivuorinen/semantic-release-config": "npm:^3.0.0"
     eslint: "npm:^10.2.0"
     eslint-config-eslint: "npm:^14.0.0"
     eslint-config-prettier: "npm:^10.1.8"
@@ -313,15 +306,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ivuorinen/semantic-release-config@npm:^2.0.0":
-  version: 2.0.3
-  resolution: "@ivuorinen/semantic-release-config@npm:2.0.3"
+"@ivuorinen/semantic-release-config@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@ivuorinen/semantic-release-config@npm:3.0.0"
   dependencies:
     "@ivuorinen/config-checker": "npm:^2.2.17"
-    "@semantic-release/github": "npm:^12.0.8"
-    conventional-changelog-conventionalcommits: "npm:^10.0.0"
+    conventional-changelog-conventionalcommits: "npm:^9.3.1"
     semantic-release: "npm:^25.0.5"
-  checksum: 10c0/caedfb2dbac5595101378dae3ad95c8b5b25a5839ce354129244b4b9557b0b9ad4a130905ba8b6684582441a0ef5d69f66943eb7cc2ee65e02f2a6ae996236fc
+  checksum: 10c0/ba710160cdf8e40c88da6f1c2aabfacfb39b0a57db0d6dc19d218493e581d3e73a37c2751156250d3d613136e953167b6986e44f90344132cbf6fb74e84cf90c
   languageName: node
   linkType: hard
 
@@ -845,7 +837,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^12.0.0, @semantic-release/github@npm:^12.0.8":
+"@semantic-release/github@npm:^12.0.0":
   version: 12.0.9
   resolution: "@semantic-release/github@npm:12.0.9"
   dependencies:
@@ -1755,12 +1747,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^10.0.0":
-  version: 10.2.1
-  resolution: "conventional-changelog-conventionalcommits@npm:10.2.1"
+"conventional-changelog-conventionalcommits@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "conventional-changelog-conventionalcommits@npm:9.3.1"
   dependencies:
-    "@conventional-changelog/template": "npm:^1.2.1"
-  checksum: 10c0/cb90f59908cba4d463258093b4a0e1d3ffe81234d032dbcbf857bfe6c8d959597b3a2c01fa69b45a4937f2059e43d9343d39636fc484ff89a624927c77cdf05d
+    compare-func: "npm:^2.0.0"
+  checksum: 10c0/e3d0dfe5680899da3660a7fbc859de1a92dd9358dc497624c3582596173713a80dcc8236d844116a3ba8403350e244c007c0c7fa5796631aea19e464cc6c2f44
   languageName: node
   linkType: hard
 
