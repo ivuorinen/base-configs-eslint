@@ -26,24 +26,50 @@ npm install @ivuorinen/eslint-config --save-dev
 yarn add @ivuorinen/eslint-config --dev
 ```
 
-After installing it, a _`eslint.config.mjs`_ file will be created automatically in the project's root folder with the following configuration:
+This package is a [flat config][flat-config-link] for ESLint 10, which no longer reads `.eslintrc*` files. Create an
+_`eslint.config.mjs`_ in the project's root folder:
 
-```json
-{
-  "extends": ["@ivuorinen"]
-}
+```js
+import ivuorinenConfig from '@ivuorinen/eslint-config'
+
+export default [
+  ...ivuorinenConfig,
+
+  // your modifications
+  {
+    rules: {
+      // "no-unused-vars": "warn"
+    }
+  }
+]
 ```
+
+With npm, a `postinstall` script writes exactly this file when the project has no ESLint config yet (npm 11 warns
+that the script is not covered by `allowScripts`). Yarn 4 does not run dependency install scripts, so no file is
+written. pnpm refuses unapproved install scripts and fails the install until you allow this package with
+`pnpm approve-builds` (or list it in `onlyBuiltDependencies`). In both cases create the file by hand as above.
 
 ## Available Configurations
 
 ### Jest
 
-Adds specific rules for the [`Jest`][jest-link] testing framework.
+Adds specific rules for the [`Jest`][jest-link] testing framework. Every element is scoped to test files
+(`**/*.{test,spec}.{js,mjs,cjs}` and `**/__tests__/**`), so it can be spread next to the base config:
 
-```json
-{
-  "extends": ["@ivuorinen/eslint-config/jest"]
-}
+```js
+import ivuorinenConfig from '@ivuorinen/eslint-config'
+import ivuorinenJest from '@ivuorinen/eslint-config/jest'
+
+export default [...ivuorinenConfig, ...ivuorinenJest]
+```
+
+To use a different test-file pattern, override `files` on each element:
+
+```js
+export default [
+  ...ivuorinenConfig,
+  ...ivuorinenJest.map(config => ({ ...config, files: ['test/**/*.js'] }))
+]
 ```
 
 ## Documentations
@@ -52,7 +78,7 @@ Read the [ESLint docs][eslint-docs-link] for more information.
 
 ## Contributing
 
-If you are interested in helping contribute, please take a look at our [contribution guidelines][contributing-link] and open an [issue][issue-link] or [pull request][pull-request-link].
+If you are interested in helping contribute, please open an [issue][issue-link] or [pull request][pull-request-link].
 
 ## Changelog
 
@@ -65,7 +91,7 @@ Distributed under the MIT License. See [LICENSE][license-link] for more informat
 [changelog-link]: https://github.com/ivuorinen/base-configs-eslint/releases
 [eslint-docs-link]: https://eslint.org
 [eslint-link]: https://github.com/eslint/eslint
-[contributing-link]: https://github.com/ivuorinen/.github/blob/main/CONTRIBUTING.md
+[flat-config-link]: https://eslint.org/docs/latest/use/configure/configuration-files
 [issue-link]: https://github.com/ivuorinen/base-configs-eslint/issues
 [license-badge]: https://img.shields.io/github/license/ivuorinen/base-configs-eslint?style=flat-square&labelColor=292a44&color=663399
 [license-link]: ./LICENSE.md

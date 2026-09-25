@@ -33,9 +33,9 @@ module.exports = [
         ...globals.es2021,
         ...globals.node,
       },
-      parserOptions: {
-        ecmaVersion: 12,
-      },
+      // No ecmaVersion override: flat config defaults to "latest". Pinning an
+      // older version turns newer syntax (class private fields, top-level
+      // await) into a fatal parse error, which runs no rules on the file.
     },
   },
   pluginJs.configs.recommended,
