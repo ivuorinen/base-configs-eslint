@@ -6,3 +6,11 @@ rules:
     # corepack itself; the version is pinned and install scripts are disabled.
     ignore:
       - pr-lint.yml
+  self-repository:
+    # The `$/` self-repository form zizmor suggests for the `./` reusable
+    # workflow call is rejected by actionlint 1.7.12, the latest release,
+    # which pre-commit and PR Lint run; support is tracked in
+    # rhysd/actionlint#711. Switch to `$/` and drop this ignore once an
+    # actionlint release accepts it.
+    ignore:
+      - publish.yml
