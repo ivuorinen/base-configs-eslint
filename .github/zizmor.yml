@@ -6,7 +6,3 @@ rules:
     # corepack itself; the version is pinned and install scripts are disabled.
     ignore:
       - pr-lint.yml
-  use-trusted-publishing:
-    # npm trusted publishing requires registry-side setup; tracked separately
-    ignore:
-      - publish.yml
