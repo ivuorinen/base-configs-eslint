@@ -47,10 +47,14 @@ jobs:
           path: node_modules
           key: node-modules-${{ hashFiles('**/yarn.lock', '.nvmrc') }}
 
+      # Unconditional and immutable: publish.yml runs this workflow as its
+      # pre-release gate, and a cache-hit skip used the restored node_modules
+      # unchecked, while a plain `yarn install` rewrote a drifted lockfile
+      # instead of failing. --mode=skip-build keeps dependency install scripts
+      # off the runner; nothing here needs a build step.
       - name: Install Dependencies
         shell: bash
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install
+        run: yarn install --immutable --mode=skip-build
 
       - name: Run Tests
         run: yarn test
