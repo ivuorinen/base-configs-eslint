@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@eslint/js": "^10.0.1",
-    "@ivuorinen/config-checker": "^2.2.1",
+    "@ivuorinen/config-checker": "^2.7.0",
     "eslint": "^10.2.0",
     "eslint-config-eslint": "^14.0.0",
     "eslint-config-prettier": "^10.1.8",

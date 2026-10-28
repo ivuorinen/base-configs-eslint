@@ -1,28 +1,14 @@
 "use strict";
 
-/* eslint no-console: "off", n/no-process-exit: "off" -- CLI app that gives users feedback */
+/* eslint no-console: "off" -- CLI app that gives users feedback */
 
-const fs = require("node:fs");
-const path = require("node:path");
-const process = require("node:process");
-const checkConfig = require("@ivuorinen/config-checker");
+const { writeStarterConfig } = require("@ivuorinen/config-checker");
 
 // This runs on every consumer install, and a non-zero exit fails that whole
-// install. The starter config is a convenience, so every step below degrades to
-// a message instead of throwing.
-
-// INIT_CWD is an npm/yarn convention, not a guarantee.
-const cwd = process.env.INIT_CWD || process.cwd();
-const foundConfig = checkConfig("eslint", cwd);
-
-if (foundConfig.length > 0) {
-  console.log("eslint-config: Found existing eslint config file, skipping creation.");
-  console.log("eslint-config: If you want to create a new config file, please remove the existing one.");
-  console.log(`eslint-config: Found config files at: ${foundConfig.join(", ")}`);
-  process.exit(0);
-}
-
-const filePath = path.join(cwd, "eslint.config.mjs");
+// install. writeStarterConfig never throws: it falls back to the working
+// directory when INIT_CWD is unset, creates the file with "wx" so a config a
+// concurrent install wrote is never overwritten, and returns a failed write for
+// this script to report.
 const fileConfig = `import ivuorinenConfig from '@ivuorinen/eslint-config';
 
 export default [
@@ -36,14 +22,13 @@ export default [
   }
 ];
 `;
+const result = writeStarterConfig("eslint", "eslint.config.mjs", fileConfig);
 
-// "wx" makes "does it exist?" and "write it" one atomic step, so a concurrent
-// install cannot create the file in between and have it overwritten.
-try {
-  fs.writeFileSync(filePath, fileConfig, { flag: "wx" });
-} catch (error) {
-  if (error.code !== "EEXIST") {
-    console.log(`eslint-config: could not write ${filePath} (${error.code || error.message}).`);
-    console.log("eslint-config: create it manually and spread @ivuorinen/eslint-config into its export.");
-  }
+if (result.status === "found") {
+  console.log("eslint-config: Found existing eslint config file, skipping creation.");
+  console.log("eslint-config: If you want to create a new config file, please remove the existing one.");
+  console.log(`eslint-config: Found config files at: ${result.found.join(", ")}`);
+} else if (result.status === "failed") {
+  console.log(`eslint-config: could not write ${result.filePath} (${result.error.code || result.error.message}).`);
+  console.log("eslint-config: create it manually and spread @ivuorinen/eslint-config into its export.");
 }
